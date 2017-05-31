@@ -25,10 +25,10 @@
  #tsutil /l - lists all the timezones
 
  #Read properties from file
- $props = Get-Content -Path ".\properties.txt" -Raw | ConvertFrom-StringData
+ $props = Get-Content -Path ".\src\properties.txt" -Raw | ConvertFrom-StringData
  Write-Verbose "$($props.'field1') And $($props.'field2')"
- Write-Verbose "$((Get-Content -Path "c:\properties.txt" -Raw | ConvertFrom-StringData).'field1')"
+ Write-Verbose "$((Get-Content -Path ".\src\properties.txt" -Raw | ConvertFrom-StringData).'field1')"
 
  #Read a json file { "field1":"value1", "field2":"value2" }
- $jsonVar = Get-Content -Path ".\json.txt" -Raw | ConvertFrom-Json
+ $jsonVar = Get-Content -Path ".\src\json.txt" -Raw | ConvertFrom-Json
  Write-Verbose "$($jsonVar.field1) And $($jsonVar.field2)"
